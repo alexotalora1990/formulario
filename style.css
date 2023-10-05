@@ -53,14 +53,15 @@ header h1 {
     display: grid;
     place-items: center;
     font-size: 200%;
-    border-right: solid #ccc8c8 5px;
+    border-right: solid #ffffff 5px;
+    color: #ffffff;
 
 
 }
 
 .form {
     background-color: #8f43f1;
-    border: solid 10px #ccc8c8;
+    border: solid 10px #ffffff;
     border-radius: 20px;
     padding: 2%;
     font-size: 120%;
