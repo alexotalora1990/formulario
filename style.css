@@ -1,0 +1,153 @@
+* {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+#alert{
+    color: #faf9f9;
+    position: relative;
+    font-size: 300%;
+    background-color: #ff0000;
+text-align: center;
+
+}
+
+body {
+    background-color: #fdfdfd;
+    color: #ffffff;
+
+}
+
+header {
+    width: 88%;
+    height: 14%;
+    background-color: #8f43f1;
+    position: fixed;
+    margin-top: 0;
+
+}
+
+header h1 {
+    margin-left: 5%;
+    margin-top: 1%;
+    color: #ffffff;
+    
+
+}
+
+.container {
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: #b988f8;
+    
+
+}
+
+.title {
+    margin-top: 5%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 200%;
+    border-right: solid #ccc8c8 5px;
+
+
+}
+
+.form {
+    background-color: #8f43f1;
+    border: solid 10px #ccc8c8;
+    border-radius: 20px;
+    padding: 2%;
+    font-size: 120%;
+    text-align: left;
+    width: 60%;
+    margin-top: 15%;
+    margin-left: 17%;
+    display: grid;
+    place-items: center;
+
+}
+
+.tamaño_boton {
+    border: none;
+    height: 30px;
+    width: 80%;
+    border-radius: 5%;
+}
+
+.tamaño_radio {
+    width: 50%;
+    border: none;
+}
+
+.registrar {
+    width: 50%;
+    height: auto;
+    padding: 2%;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #8f43f1;
+    font-size: 100%;
+}
+
+.registro {
+    text-align: center;
+
+
+}
+
+.genero {
+    width: 80%;
+    padding: 0;
+    align-items: left;
+    padding: 0;
+    margin-left: 0;
+
+}
+
+@media(max-width: 1000px) {
+
+    .container {
+
+        display: grid;
+        grid-template-columns: 100%;
+
+
+    }
+
+    .form {
+        margin-top: 5%;
+        border: solid 5px #ffffff;
+        padding: 2%;
+        font-size: 100%;
+
+    }
+    .title {
+        font-size: 150%;
+        margin-top: 15%;
+        border-right: none;
+       
+    }
+
+
+}
+
+@media(max-width:600px) {
+    .title {
+        font-size: 150%;
+        margin-top: 25%;
+        border-right: none;
+        
+    }
+
+    .form {
+        width: 80%;
+        margin-left: 5%;
+    }
+}
