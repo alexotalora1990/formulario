@@ -89,7 +89,7 @@ else if (document.getElementById("identificacion").value == "") {
       document.getElementById("alert").textContent = ""
   }, 2000);
 }
-else if (document.getElementById("").value == "") {
+else if (document.getElementById("numero").value == "") {
   document.getElementById("alert").textContent = "seleccione su genero"
   setTimeout(() => {
       document.getElementById("alert").textContent = ""
