@@ -6,7 +6,7 @@ form {
     margin: 0 auto;
     padding: 2%;
     border-radius: 10px;
-    font-size: 150%;
+    font-size: 130%;
 
     background: rgb(0,153,252);
 background: linear-gradient(0deg, rgba(0,153,252,0.896796218487395) 0%, rgba(45,98,253,1) 100%);
@@ -39,7 +39,7 @@ input{
     padding: 1%;
 }
 input[type="radio"]{
-    width: 10%;
+    width: 5%;
     height: 30px;
     
 
