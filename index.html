@@ -1,113 +1,75 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="./style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>Document</title>
+    <link rel="stylesheet" href="formu.css">
 </head>
 
 <body>
-    <header>
-
-        <h1>alex_otalora</h1>
-        <h3 id="alert"></h3>
-    </header>
-
-    <div class="container">
-
-        <div class="title">
-            <h1 id="title">
-                <p>Formulario</p>
-                <p>De Registro</p>
-            </h1>
-        </div>
-
-        <div class="form" id="formulario">
-            <div>
-                <div>
-
-                    <label>Ingrese su Nombre</label> <br>
-                    <i class="fa-solid fa-user"></i>
-                    <input class="tamaño_boton" id="nombre" type="texto">
-                </div>
-                <br>
-                <div>
-
-                    <label>Ingrese su apellido</label> <br>
-                    <i class="fa-solid fa-user"></i>
-                    <input class="tamaño_boton" id="apellido" type="texto">
-                </div>
-                <br>
-                <div>
-
-                    <label class="id">Identificacion</label> <br>
-                    <i class="fa-solid fa-star"></i>
-                    <select name="" id="identificacion" class="selec">
-                        <option value=""></option>
-                        <option value="CC">CC</option>
-                        <option value="TI">TI</option>
-                        <option value="RC">RC</option>
-                        <option value="CE">CE</option>
-                        <option value="OTRO">OTRO</option>
-                    </select>
-                    <br>
-                    <i class="fa-solid fa-star"></i>
-
-                    <input class="tamaño_boton" id="numero" type="number">
-
-                </div>
-                <br>
-                <div class="genero">
-                    <i class="fa-solid fa-question-circle"></i>
-                    <label  class="sexo">Selecciona tu Genero</label><br>
-                    <input class="tamaño_radio" type="radio" id="hombre" name="sexo">Masculino
-                    <input class="tamaño_radio" type="radio" id="mujer" name="sexo">Femenino
-                    <input class="tamaño_radio" type="radio" id="otro" name="sexo">otro
-                </div>
-                <br>
-                <div>
-
-                    <label>Selecciona tu fecha de nacimiento:</label>
-                    <br>
-                    <i class="fa-solid fa-calendar"></i>
-                    <input class="tamaño_boton" type="date" id="fecha" name="trip-start" />
-
-                </div>
-                <br>
-                <div>
-
-                    <label>Ingrese su Correo</label> <br>
-                    <i class="fa-solid fa-envelope"></i>
-                    <input class="tamaño_boton" type="email" id="correo">
-                </div>
-                <br>
-                <div>
-                    <label>Ingrese su telefono </label> <br>
-                    <i class="fa-solid fa-phone"></i>
-                    <input class="tamaño_boton" id="telefono" type="texto">
-                </div>
-                <br>
-                <div class="registro">
-                    <input class="registrar" type="button" value="Registrar" id="boton" onclick="validar()">
-                </div>
 
 
+    <h1>Formulario de Registro</h1>
+    <h3 id="alert"></h3>
+    <form action="procesar_registro.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
 
-            </div>
-        </div>
+        <label for="tipo_documento">Tipo de Documento:</label>
+        <select id="tipo_documento" name="tipo_documento">
+            <option value="CC">CC</option>
+            <option value="TI">TI</option>
+            <option value="CE">CE</option>
+        </select><br><br>
 
+        <label for="numero_documento">Número de Documento:</label>
+        <input type="text" id="numero_documento" name="numero_documento" required><br><br>
 
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
 
-    </div>
-    <script src="./formulario.js"></script>
+        <label>Género:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="genero_masculino">Masculino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="genero_femenino">Femenino</label>
+        <input type="radio" id="otro" name="genero" value="otro">
+        <label for="genero_otro">Otro</label><br><br>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="celular">Número de Celular:</label>
+        <input type="tel" id="celular" name="celular" required><br><br>
+
+        <input type="button" value="Registrar" id="boton" onclick="validar()">
+    </form>
+
+    <table>
+        <h4>Tabla de Registros</h4>
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Tipo_Ident.</td>
+                <td>Numero</td>
+                <td>Genero</td>
+                <td>Fecha_Nac</td>
+                <td>Correo</td>
+                <td>Telefono</td>
+                <td>Modificar</td>
+            </tr>
+        </thead>
+        <tbody id="tabla">
+        </tbody>
+    </table>
+
+    <script src="formulario.js"></script>
 </body>
 
 </html>
