@@ -141,6 +141,9 @@ function tabla() {
       edita(item, index)
     })
     eliminar.textContent = "❌"
+    eliminar.addEventListener("click", ()=>{
+     event.target.parentNode.parentNode.remove()
+    })
     td1.textContent = item.nombre
     td2.textContent = item.apellido
     td3.textContent = item.tipo_documento
